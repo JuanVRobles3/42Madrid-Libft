@@ -6,15 +6,14 @@
 /*   By: jrobles- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 17:37:28 by jrobles-          #+#    #+#             */
-/*   Updated: 2022/01/19 17:37:29 by jrobles-         ###   ########.fr       */
+/*   Updated: 2022/02/02 19:43:50 by jrobles-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		*ft_memset(void *str, int c, size_t len)
+void	*ft_memset(void *str, int c, size_t len)
 {
-
 	char	*p;
 
 	p = (char *)str;

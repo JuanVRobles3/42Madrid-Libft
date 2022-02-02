@@ -6,18 +6,18 @@
 /*   By: jrobles- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 17:31:00 by jrobles-          #+#    #+#             */
-/*   Updated: 2022/01/19 17:31:05 by jrobles-         ###   ########.fr       */
+/*   Updated: 2022/02/02 19:41:32 by jrobles-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int a)
+int	ft_isprint(int a)
 {
-    if((a > 31 && a < 127))
-    {
-        return 1;
-    } 
-    else
-        return 0;
+	if (a > 31 && a < 127)
+	{
+		return (1);
+	}
+	else
+		return (0);
 }
