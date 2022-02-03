@@ -1,5 +1,7 @@
 .vscode
 .DS_STORE
+*.out
+libft.a
 
 libft-unit-test
 libft-war-machine
