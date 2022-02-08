@@ -29,21 +29,21 @@
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *str1, const char *str2, size_t n)
 {
 	size_t	i;
 	size_t	c;
 
-	if (needle[0] == '\0')
-		return ((char *)haystack);
+	if (str2[0] == '\0')
+		return ((char *)str1);
 	i = 0;
-	while (haystack[i] != '\0' && i < len)
+	while (str1[i] != '\0' && i < n)
 	{
 		c = 0;
-		while ((haystack[i + c] == needle[c]) && (i + c) < len)
+		while ((str1[i + c] == str2[c]) && (i + c) < n)
 		{
-			if (needle[c + 1] == '\0')
-				return ((char *)(&haystack[i]));
+			if (str2[c + 1] == '\0')
+				return ((char *)(&str1[i]));
 			c++;
 		}
 		i++;
