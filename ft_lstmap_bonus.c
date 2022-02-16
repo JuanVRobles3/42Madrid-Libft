@@ -9,10 +9,10 @@
 /*   Updated: 2022/02/08 16:22:47 by jrobles-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+/*
 #include "libft.h"
 
 t_list *ft_lstmap(t_list *lst, void *(*f)(void *),void (*del)(void *))
 {
     return (0);
-}
+}*/

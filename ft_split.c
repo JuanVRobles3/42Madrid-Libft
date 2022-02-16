@@ -11,7 +11,8 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+//recorro el arr y voy haciendo free hasta que sea null
+//luego libero el resto del array
 static char	**ft_freesplit(char **arr)
 {
 	size_t	i;
@@ -27,7 +28,7 @@ static char	**ft_freesplit(char **arr)
 	free(arr);
 	return (NULL);
 }
-
+//Cuento las palabras
 static size_t	ft_countelements(char const *s, char c)
 {
 	size_t	i;
@@ -49,7 +50,8 @@ static size_t	ft_countelements(char const *s, char c)
 	}
 	return (count);
 }
-
+//inicializo el split
+//hago los mallocs
 static char	**init_split(char const *s, char c)
 {
 	char	**arr;

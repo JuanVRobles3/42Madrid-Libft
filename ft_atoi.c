@@ -6,7 +6,7 @@
 /*   By: jrobles- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 14:00:53 by jrobles-          #+#    #+#             */
-/*   Updated: 2022/02/02 20:03:52 by jrobles-         ###   ########.fr       */
+/*   Updated: 2022/02/14 00:02:07 by jrobles-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_atoi(const char *str)
 {
 	int	i;
 	int	neg;
-	int	res;
+	long	res;
 
 	i = 0;
 	neg = 1;
