@@ -1,6 +1,7 @@
 .vscode
 .DS_STORE
 *.out
+*.o
 libft.a
 
 libft-unit-test
