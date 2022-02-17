@@ -12,43 +12,45 @@
 
 #include "libft.h"
 
-int		ft_countsize(long int n);
-void	ft_convbase(long int n, char *number, long int i);
-
-char	*ft_itoa(int n)
+size_t    numdig(int n)
 {
-	char		*number;
-	long int	len;
+    size_t    order;
 
-	len = ft_countsize(n);
-	number = (char *)malloc((len + 1) * sizeof(char));
-	if (!number)
-		return (NULL);
-	number[len--] = '\0';
-	ft_convbase(n, number, len);
-	return (number);
+    if (!n)
+        return (1);
+    order = 0;
+    if (n < 0)
+        order++;
+    while (n != 0)
+    {
+        order++;
+        n /= 10;
+    }
+    return (order);
 }
 
-// recursively count integer size
-int	ft_countsize(long int n)
+char    *ft_itoa(int n)
 {
-	if (n < 0)
-		return (1 + ft_countsize(-n));
-	if ((n / 10) == 0)
-		return (1);
-	else
-		return (1 + ft_countsize(n / 10));
-}
+    size_t    order;
+    char    d;
+    char    *str;
 
-// recursively convert integer to string
-void	ft_convbase(long int n, char *number, long int i)
-{
-	if (n < 0)
-	{
-		number[0] = '-';
-		n *= -1;
-	}
-	if (n >= 10)
-		ft_convbase((n / 10), number, (i - 1));
-	number[i] = (n % 10) + '0';
+    order = numdig(n);
+    str = (char *) malloc(sizeof(char) * (order + 1));
+    if (str == NULL)
+        return (str);
+    str[order] = '\0';
+    if (n < 0)
+        str[0] = '-';
+    if (n == 0)
+        str[--order] = '0';
+    while (n != 0)
+    {
+        d = n % 10;
+        if (d < 0)
+            d = -d;
+        str[--order] = d + '0';
+        n /= 10;
+    }
+    return (str);
 }
