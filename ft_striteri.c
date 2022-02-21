@@ -6,13 +6,13 @@
 /*   By: jrobles- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 00:11:54 by jrobles-          #+#    #+#             */
-/*   Updated: 2022/02/14 00:11:56 by jrobles-         ###   ########.fr       */
+/*   Updated: 2022/02/18 19:14:07 by jrobles-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_striteri (char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-    unsigned int	i;
+	unsigned int	i;
 
 	if (!s || !f)
 		return ;

@@ -6,7 +6,7 @@
 /*   By: jrobles- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 15:34:34 by jrobles-          #+#    #+#             */
-/*   Updated: 2022/02/04 15:40:50 by jrobles-         ###   ########.fr       */
+/*   Updated: 2022/02/18 19:16:34 by jrobles-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,10 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	size_t	i;
 
-	if(!s)
-	{
-		return;
-	}
+	if (!s)
+		return ;
 	i = 0;
-	while(s[i] != '\0')
+	while (s[i] != '\0')
 	{
 		ft_putchar_fd(s[i], fd);
 		i++;

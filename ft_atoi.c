@@ -6,33 +6,38 @@
 /*   By: jrobles- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 14:00:53 by jrobles-          #+#    #+#             */
-/*   Updated: 2022/02/14 00:02:07 by jrobles-         ###   ########.fr       */
+/*   Updated: 2022/02/18 18:49:11 by jrobles-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <limits.h>
 
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	neg;
-	long	res;
+	size_t	i;
+	size_t	num;
+	int		sign;
 
 	i = 0;
-	neg = 1;
-	res = 0;
-	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
+	num = 0;
+	sign = 1;
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' || str[i] == '\v'
+		|| str[i] == '\f' || str[i] == '\r')
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{
-		if (str[i] == '-')
-			neg *= -1;
-		i++;
+		if (str[i++] == '-')
+			sign = -1;
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		res = (str[i] - '0') + (res * 10);
+		num = (str[i] - '0') + (num * 10);
 		i++;
 	}
-	return (res * neg);
+	if (num > LONG_MAX && sign < 0)
+		return (0);
+	else if (num > LONG_MAX && sign > 0)
+		return (-1);
+	return ((int)(num * sign));
 }

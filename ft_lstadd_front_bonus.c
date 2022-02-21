@@ -6,13 +6,13 @@
 /*   By: jrobles- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 16:20:08 by jrobles-          #+#    #+#             */
-/*   Updated: 2022/02/08 16:20:10 by jrobles-         ###   ########.fr       */
+/*   Updated: 2022/02/18 18:52:38 by jrobles-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	t_list	*aux;
 

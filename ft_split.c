@@ -6,13 +6,15 @@
 /*   By: jrobles- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 14:05:06 by jrobles-          #+#    #+#             */
-/*   Updated: 2022/02/09 14:05:07 by jrobles-         ###   ########.fr       */
+/*   Updated: 2022/02/19 12:26:48 by jrobles-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 //recorro el arr y voy haciendo free hasta que sea null
 //luego libero el resto del array
+
+#include "libft.h"
+
 static char	**ft_freesplit(char **arr)
 {
 	size_t	i;
@@ -28,6 +30,7 @@ static char	**ft_freesplit(char **arr)
 	free(arr);
 	return (NULL);
 }
+
 //Cuento las palabras
 static size_t	ft_countelements(char const *s, char c)
 {
@@ -50,6 +53,7 @@ static size_t	ft_countelements(char const *s, char c)
 	}
 	return (count);
 }
+
 //inicializo el split
 //hago los mallocs
 static char	**init_split(char const *s, char c)
